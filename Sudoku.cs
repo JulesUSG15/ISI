@@ -1,87 +1,148 @@
- private bool nestpasdansligne(int value, int indR)
-        {
-            bool p=true;
-            for(int i=0;i<9;i++){
-                if(grille[i,indR].getValeur()==value) p=false;
-               }
-            return p;
-        }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-private bool nestpasdanscolonne(int value, int indC)
-        {
-            bool p=true;
-            for(int i=0;i<9;i++){
-                if(grille[indC,i].getValeur()==value) p=false;    
+namespace SUDOKU
+{
+    internal class SUDOKU
+    {
+        //attributs
+        private Case[,] grille;
+		//constructeur
+        public Grille(){
+            //on initialise la grille avec un tableau 2 dimensions 9 par 9 avec des objets Case
+            initGrille();
+            //on remplit la grille initialisée
+            remplirBacktrack(0, 'n');
+         }
+		//methode pour initialiser la grille
+        private void initGrille(){
+            //on initialise la grille avec un tableau(9,9) d'objet Case
+            grille = new Case[9,9];
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    grille[i, j] = new Case();
                 }
+            }
+        }
+
+
+        private bool nestPasDansColonne(int valeur, int num_col)
+        {
+            for (int i = 0; i<grille.Length; i++)
+            {
+                if (grille[i,num_col] == valeur) return false;
+            }
+            return true;
+
+        }
+        private bool nestpasdansligne(int value, int num_ligne)
+        {
+            bool p = true;
+            for (int i = 0; i < 9; i++)
+            {
+                if (grille[num_ligne, i] == value) p = false;
+            }
             return p;
         }
 
-private bool nestpasdanscarre(int value, int indR, int indC)
+        private bool nestpasdanscarre(int value, int num_col, int num_ligne)
         {
-            bool p=true;
-            int indRcarre=indR/3;
-            int indCcarre=indC/3;
-            for(int i=0;i<3;i++){
-                for(int j=0;j<3;j++){
-                    if(grille[indRcarre*3+i,indCcarre*3+j].getValeur()==value) p=false;
+            bool p = true;
+            int colonnecarre = num_col / 3;
+            int lignecarre = num_ligne / 3;
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (grille[lignecarre3 + i, colonnecarre*3 + j] == value) p = false;
                 }
             }
             return p;
         }
 
-
-public class SudokuGenerator {
-    private int[,] grille;
-
-    public SudokuGenerator() {
-        grille = new int[9, 9];
-    }
-
-    public int[,] GenererGrille() {
-        GenererGrilleRecursif(0, 0);
-        return grille;
-    }
-
-    private bool GenererGrilleRecursif(int ligne, int colonne) {
-        if (ligne == 9) {
-            return true; // grille complétée
+        public int getValCase(int ligne, int col)
+        {
+            return grille[col, ligne].getValeur();
         }
-
-        int prochaineLigne = colonne == 8 ? ligne + 1 : ligne;
-        int prochaineColonne = colonne == 8 ? 0 : colonne + 1;
-
-        List<int> valeursPossibles = GetValeursPossibles(ligne, colonne);
-
-        foreach (int valeur in valeursPossibles.OrderBy(v => Guid.NewGuid())) {
-            grille[ligne, colonne] = valeur;
-
-            if (GenererGrilleRecursif(prochaineLigne, prochaineColonne)) {
-                return true;
-            }
-        }
-
-        grille[ligne, colonne] = 0; // reset la case
-
-        return false;
-    }
-
-    private List<int> GetValeursPossibles(int ligne, int colonne) {
-        List<int> valeursPossibles = Enumerable.Range(1, 9).ToList();
-
-        for (int i = 0; i < 9; i++) {
-            valeursPossibles.Remove(grille[i, colonne]); // enlever les valeurs dans la colonne
-            valeursPossibles.Remove(grille[ligne, i]); // enlever les valeurs dans la ligne
-        }
-
-        int carreLigne = ligne / 3 * 3;
-        int carreColonne = colonne / 3 * 3;
-
-        for (int i = carreLigne; i < carreLigne + 3; i++) {
-            for (int j = carreColonne; j < carreColonne + 3; j++) {
-                valeursPossibles.Remove(grille[i, j]); // enlever les valeurs dans le carré
-            }
-        }
-
-        return valeursPossibles;
     }
 }
+
+//classe Case
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace WindowsFormsApplication1
+{
+	
+    class Case
+    {
+    	//attributs
+        private bool[] tabValeurs;
+        private int valeur;
+		
+		//constructeur
+        public Case(){
+            initCase();
+        }
+		
+		//methode pour initialiser le tableau de valeurs de la case (a false)
+		//et sa valeur a 0
+        private void initCase()
+        {
+            tabValeurs = new bool[9];
+            for (int i = 0; i < 9; i++)
+            {
+                tabValeurs[i] = false;
+            }
+            valeur = 0;
+        }
+		
+		//methode pour reinitialiser le tableau de valeurs de la case
+        public void resetTab()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                tabValeurs[i] = false;
+            }
+        }
+		
+		//methode pour enlever un chiffre des valeurs possibles de la case
+        public void setVrai(int indice)
+        {
+            tabValeurs[indice - 1] = true;
+        }
+		
+		//methode pour modifier la valeur de la case
+        public void setValeur(int value)
+        {
+            valeur = value;
+        }
+		
+		//methode pour obtenir la valeur de la case
+        public int getValeur()
+        {
+            return valeur;
+        }
+		
+		//methode pour recopier (passage par reference) le tableau de valeur de la case
+		//dans un tableau passé en argument
+        public void getTabValeurs(bool[] tabValCase)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                tabValCase[i] = tabValeurs[i];
+            }
+            
+        }
+    }
+}
+
+
