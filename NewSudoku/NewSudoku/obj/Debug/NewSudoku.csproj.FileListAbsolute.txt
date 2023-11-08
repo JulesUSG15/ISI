@@ -1,0 +1,10 @@
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\bin\Debug\NewSudoku.exe.config
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\bin\Debug\NewSudoku.exe
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\bin\Debug\NewSudoku.pdb
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\obj\Debug\NewSudoku.csproj.AssemblyReference.cache
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\obj\Debug\NewSudoku.Form1.resources
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\obj\Debug\NewSudoku.Properties.Resources.resources
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\obj\Debug\NewSudoku.csproj.GenerateResource.cache
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\obj\Debug\NewSudoku.csproj.CoreCompileInputs.cache
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\obj\Debug\NewSudoku.exe
+C:\Users\dom\source\repos\NewSudoku\NewSudoku\obj\Debug\NewSudoku.pdb
