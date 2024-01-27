@@ -1,0 +1,65 @@
+﻿@model Projet_Isi.Models.Metier.Cours
+
+@{
+    ViewData["Title"] = "Supprimer un Cours";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Supprimer un Cours</h2>
+
+<div>
+    <h4>Cours</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom_prof)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_prof)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-danger" /> |
+            @Html.ActionLink("Retour à la liste", "Index")
+        </div>
+    }
+</div>

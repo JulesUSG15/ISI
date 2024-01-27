@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Models\Metier\" />
+    <None Remove="Models\Utilitaires\" />
+    <None Remove="Models\Persistance\" />
+    <None Remove="Models\MesExceptions\" />
+    <None Remove="Models\Dao\" />
+    <None Remove="Views\Cours\" />
+    <None Remove="Views\Contact\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Views\Connexion\" />
+    <None Remove="Views\Inscription\" />
+    <None Remove="Views\Etudiant\" />
+    <None Remove="Views\Ressource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Metier\" />
+    <Folder Include="Models\Utilitaires\" />
+    <Folder Include="Models\Persistance\" />
+    <Folder Include="Models\MesExceptions\" />
+    <Folder Include="Models\Dao\" />
+    <Folder Include="Views\Cours\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\css\icons\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\Connexion\" />
+    <Folder Include="Views\Inscription\" />
+    <Folder Include="Views\Etudiant\" />
+    <Folder Include="Views\Ressource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Shared\EmptyHtmlFile.cshtml" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\icons\" />
+  </ItemGroup>
+</Project>

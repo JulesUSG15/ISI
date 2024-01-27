@@ -1,0 +1,67 @@
+﻿<Properties StartupConfiguration="{E18FC241-CF55-4F46-9DB2-307BAF9B1582}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Projet__Isi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projet_Isi/Program.cs">
+    <Files>
+      <File FileName="Projet_Isi/appsettings.json" />
+      <File FileName="Projet_Isi/appsettings.Development.json" />
+      <File FileName="Projet_Isi/Models/ErrorViewModel.cs" />
+      <File FileName="Projet_Isi/Models/Metier/Etudiant.cs" Line="20" Column="1" />
+      <File FileName="Projet_Isi/Models/Metier/Ressource.cs" Line="16" Column="97" />
+      <File FileName="Projet_Isi/Models/Metier/Utilisateur.cs" Line="31" Column="1" />
+      <File FileName="Projet_Isi/Models/Utilitaires/MonMotPassHash.cs" Line="1" Column="1" />
+      <File FileName="Projet_Isi/Models/Utilitaires/FonctionUtiles.cs" Line="74" Column="10" />
+      <File FileName="Projet_Isi/Models/Persistance/Connexion.cs" />
+      <File FileName="Projet_Isi/Models/Persistance/DBInterface.cs" Line="4" Column="19" />
+      <File FileName="Projet_Isi/Models/MesExceptions/MonException.cs" />
+      <File FileName="Projet_Isi/Models/MesExceptions/Serreurs.cs" />
+      <File FileName="Projet_Isi/Models/Metier/Cours.cs" Line="21" Column="1" />
+      <File FileName="Projet_Isi/Controllers/HomeController.cs" />
+      <File FileName="Projet_Isi/Program.cs" Line="39" Column="1" />
+      <File FileName="Projet_Isi/Views/Shared/_Layout.cshtml" />
+      <File FileName="Projet_Isi/Views/Home/Index.cshtml" Line="38" Column="1" />
+      <File FileName="Projet_Isi/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Projet_Isi/Views/Shared/_Navigation.cshtml" Line="1" Column="1" />
+      <File FileName="Projet_Isi/Views/Cours/Index.cshtml" Line="74" Column="1" />
+      <File FileName="Projet_Isi/Models/Dao/ServiceCours.cs" Line="120" Column="10" />
+      <File FileName="Projet_Isi/Controllers/CoursController.cs" Line="94" Column="10" />
+      <File FileName="Projet_Isi/Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="Projet_Isi/Views/_ViewImports.cshtml" />
+      <File FileName="Projet_Isi/Views/_ViewStart.cshtml" />
+      <File FileName="Projet_Isi/Properties/launchSettings.json" />
+      <File FileName="Projet_Isi/Controllers/ContactController.cs" />
+      <File FileName="Projet_Isi/Views/Contact/Index.cshtml" Line="38" Column="1" />
+      <File FileName="Projet_Isi/Views/Contact/Confirmation.cshtml" Line="1" Column="1" />
+      <File FileName="Projet_Isi/Models/Dao/ServiceRessource.cs" Line="19" Column="1" />
+      <File FileName="Projet_Isi/Controllers/RessourcesController.cs" Line="28" Column="1" />
+      <File FileName="Projet_Isi/Views/Cours/Modifier.cshtml" Line="42" Column="1" />
+      <File FileName="Projet_Isi/Views/Connexion/Index.cshtml" Line="37" Column="1" />
+      <File FileName="Projet_Isi/Models/Dao/ServiceUtilisateur.cs" Line="71" Column="1" />
+      <File FileName="Projet_Isi/Controllers/ConnexionController.cs" Line="19" Column="10" />
+      <File FileName="Projet_Isi/Controllers/InscriptionController.cs" Line="59" Column="1" />
+      <File FileName="Projet_Isi/Views/Inscription/Index.cshtml" Line="65" Column="1" />
+      <File FileName="Projet_Isi/Models/Dao/ServiceEtudiant.cs" Line="35" Column="1" />
+      <File FileName="Projet_Isi/Controllers/EtudiantController.cs" Line="1" Column="1" />
+      <File FileName="Projet_Isi/Views/Etudiant/Index.cshtml" Line="48" Column="1" />
+      <File FileName="Projet_Isi/Views/Ressource/Index.cshtml" Line="47" Column="2" />
+      <File FileName="Projet_Isi/Views/Cours/Supprimer.cshtml" Line="28" Column="14" />
+      <File FileName="Projet_Isi/Views/Cours/Ajouter.cshtml" Line="28" Column="29" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Projet_Isi" expanded="True">
+            <Node name="Projet_Isi" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

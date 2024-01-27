@@ -1,0 +1,90 @@
+﻿@model Projet_Isi.Models.Metier.Cours
+@{
+    ViewBag.Title = "Modifier un Cours";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Modifier un Cours</h2>
+
+@if (Model != null)
+{
+    <div class="container">
+        <div class="col-md-8 col-sm-8">
+            <div class="blanc">
+                <h1>Modifier un Cours</h1>
+            </div>
+
+            @using (Html.BeginForm("Modifier", "Cours", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <!-- ID Cours -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Id_cours, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Id_cours, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.Id_cours, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Nom du Cours -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nom, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nom, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nom, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Nom du Prof -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nom_prof, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nom_prof, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nom_prof, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Durée -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Duree, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Duree, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Duree, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Ajoutez ici les autres champs du Cours -->
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Enregistrer" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
