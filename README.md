@@ -1,2 +1,2 @@
 # ISI
-Cours ISI Dotnet 
+Jeu Sudoku réalisé par Jules Ginhac
